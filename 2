@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <string.h>
+
+using namespace std;
+
+int main()
+{
+    string a, tmp;
+    cout << "введіть рядок: ";
+    cin >> a;
+    cout << endl;
+    int k = 0;
+    while(a[k] != NULL)
+    {
+        k++;
+    }
+    for (int i = k - 1, j = 0; i >= 0; i--, j++)
+    {
+        tmp[j] = a[i];
+    }
+    for (int i = 0; i < k; i++)
+    {
+        a[i] = tmp[i];
+    }
+    cout << endl << a;
+    return 0;
+}
